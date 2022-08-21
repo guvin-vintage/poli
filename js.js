@@ -1,7 +1,4 @@
-$(window).on('load', function (event) {
-    $('body').removeClass('preloading');
-    $('.load').delay(1000).fadeOut('fast');
-})
+
 $(document).ready(function() {
     
      /*SEARCH*/
@@ -71,6 +68,17 @@ $(document).ready(function() {
   }
   )
   wow.init();
+
+
+   /*LOAD*/
+   window.addEventListener("load",function() {
+    var loader = document.querySelector(".loading")
+    this.setTimeout(function() {
+        setTimeout(function () {
+            loader.style="display:none;"
+        },1000)
+    },1000)
+  })
 
 })
 function init() {
